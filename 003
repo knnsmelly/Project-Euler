@@ -1,0 +1,14 @@
+# Qn 3 
+
+def lpf(n):
+    d = 2
+    while d*d <= n: #prime factors only occur below the sqrt of itself
+        while (n % d) == 0:
+            n //= d
+        d += 1
+    if n > 1:
+      return n
+    else:
+     return d -1
+
+print(lpf(600851475143))
